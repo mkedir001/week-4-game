@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+            <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+            
+
+<div class="card">
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body">
+    <h4 class="card-title text-center">Crystal Game!</h4>
+    <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+  <!-- <h1>Hangman!</h1> -->
+
+  <!-- <p> Number of guesses left</p> -->
+  <!-- <div id="Guessesleft text-center">
+  
+  </div> -->
+  <hr>
+
+  <!-- Here we create a generic drink-options div -->
+  <!-- <div id="currentWord"></div> -->
+  <div id="wordGuessed"></div>
+
+  <br>
+  <br>
+
+  <!-- Card begings here -->
+
+  <div id="TotalRandom">
+    
+
+  </div>
+  <div id="Crystals">
+    <img id="crystal111" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
+    <img id="crystal222" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
+    <img id="crystal333" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
+    <img id="crystal444" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
+
+  </div>
+  <div id="CurrentScore">
+    
+
+  </div>
+  <div>
+
+    <p>Wins</p>
+    <p id="winner"> </p>
+
+  </div>
+
+  <div>
+
+    <p>Losses</p>
+    <p id="loser"> </p>
+
+  </div>
+
+
+ <!-- Card ending here -->
+  
+<script type="text/javascript">
+
+  
+  
+  var RandomTotal = "";
+  var totalScore =0;
+  var wins=0;
+  var lossess=0;
+  var crystal1 = "";
+  var crystal2 = "";
+  var crystal3 = "";
+  var crystal4 = "";
+
+
+  function getRandom(min, max) {
+
+    return Math.floor(Math.random()*(max - min) + min);
+      
+  };
+
+  
+
+  $("CurrentScore").innerHTML = totalScore;
+
+  function game(){
+
+    if (totalScore === RandomTotal) {
+      wins++;
+      alert('You win');
+      $('#winner').html(wins);
+      newGame();
+    }
+
+    else if (totalScore > RandomTotal) {
+      lossess++;
+      alert("you Lose");
+      $('#loser').html(lossess);
+      newGame();
+
+    }
+  };
+
+  function newGame(){
+
+    RandomTotal = getRandom(19,120);
+  crystal1 = getRandom(1, 12);
+  crystal2 = getRandom(1, 12);
+  crystal3 = getRandom(1, 12);
+  crystal4 = getRandom(1, 12);
+  totalScore = 0;
+
+  $('#TotalRandom').html(RandomTotal);
+
+  $('#CurrentScore').html(totalScore);
+
+  };
+
+  newGame();
+
+  // RandomTotal = getRandom(19,120);
+  // crystal1 = getRandom(1, 12);
+  // crystal2 = getRandom(1, 12);
+  // crystal3 = getRandom(1, 12);
+  // crystal4 = getRandom(1, 12);
+
+
+  // $('#TotalRandom').html(RandomTotal);
+
+  // $('#CurrentScore').html(totalScore);
+
+$('#crystal111').on('click', function() {
+  
+
+ crystal1 = getRandom(1,12);
+  totalScore = crystal1 + totalScore;
+  $("#CurrentScore").html(totalScore);
+ game();
+  console.log(crystal1);
+  console.log(totalScore);
+
+
+});
+
+$('#crystal222').on('click', function() {
+  
+  crystal2 = getRandom(1,12);
+  totalScore = crystal2 + totalScore;
+  $('#CurrentScore').html(totalScore);
+ game();
+  console.log(crystal2);
+  console.log(totalScore);
+
+});
+
+$('#crystal333').on('click', function() {
+  
+  crystal3 = getRandom(1,12);
+  totalScore = crystal3 + totalScore;
+  $('#CurrentScore').html(totalScore);
+ game();
+  console.log(crystal3);
+  console.log(totalScore);
+
+});
+
+$('#crystal444').on('click', function() {
+  
+ crystal4 = getRandom(1,12);
+  totalScore = crystal4 + totalScore;
+  $('#CurrentScore').html(totalScore);
+ game();
+  console.log(crystal4);
+  console.log(totalScore);
+
+});
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+    
+    
+      
+
+
+      
+            
+              
+        
+
+          
+
+
+</script>
+   
+      
+
+
+    
+<!-- <script src="./assets/javascript/game.js"></script> -->
+  
+
+</body>
+</html>

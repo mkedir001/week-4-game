@@ -20,56 +20,84 @@
   </div>
 </div>
 
-  <!-- <h1>Hangman!</h1> -->
 
-  <!-- <p> Number of guesses left</p> -->
-  <!-- <div id="Guessesleft text-center">
-  
-  </div> -->
-  <hr>
+<!-- CARD BEGINS HERE -->
 
-  <!-- Here we create a generic drink-options div -->
-  <!-- <div id="currentWord"></div> -->
-  <div id="wordGuessed"></div>
+<p class="card-text"><small class="text-muted"></small></p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title text-center">How to play</h4>
+    <p class="card-text">Objective: Each crystal will generate a random number each time it's clicked. The objective of this game is to generate random numbers by clicking on the crystals, and in order to win, you must garner a total of</p> 
+    <p id="TotalRandom"></p>
 
-  <br>
-  <br>
+    <p>points</p>
 
-  <!-- Card begings here -->
+    <p class="card-text"><small class="text-muted"></small></p>
+  </div>
 
   <div id="TotalRandom">
     
 
   </div>
-  <div id="Crystals">
+  <!-- <img class="card-img-bottom" src="..." alt="Card image cap"> -->
+
+
+</div>
+
+<div class="card mb-3">
+  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+ <div class="card-img-top ml-5 mr-5" id="Crystals">
     <img id="crystal111" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
     <img id="crystal222" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
     <img id="crystal333" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
     <img id="crystal444" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
 
   </div>
-  <div id="CurrentScore">
-    
 
+
+  <div class="card-body">
+    <h4 class="card-title">CLICK CRYSTALS</h4>
+</div>
+
+
+<div  class="row">
+
+<div class="card text-center col-md-3 ml-5">
+    <div class="card-body">
+      <h4 class="card-title bg-danger">LOSSES</h4>
+      <p class="card-text" id="loser">.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
   </div>
-  <div>
 
-    <p>Wins</p>
-    <p id="winner"> </p>
-
+  <div class="card text-center col-md-3">
+    <div class="card-body">
+      <h4 class="card-title">TOTAL SCORE</h4>
+      <p class="card-text" id="CurrentScore">.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
   </div>
 
-  <div>
-
-    <p>Losses</p>
-    <p id="loser"> </p>
-
+  <div class="card text-center col-md-3">
+    <div class="card-body">
+      <h4 class="card-title bg-success">WINS</h4>
+      <p class="card-text" id="winner">.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
   </div>
+ 
+</div>
+   
+  <hr>
 
 
- <!-- Card ending here -->
+  <br>
+  <br>
+
   
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
   
   
@@ -186,45 +214,13 @@ $('#crystal444').on('click', function() {
 });
 
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-    
-    
-      
-
-
-      
-            
-              
-        
-
-          
-
-
-</script>
+</script> -->
    
       
 
 
     
-<!-- <script src="./assets/javascript/game.js"></script> -->
+<script src="./assets/javascript/game.js"></script>
   
 
 </body>
